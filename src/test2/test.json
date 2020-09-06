@@ -1,0 +1,16 @@
+{
+  "status": "Ok",
+  "status_code": "ok",
+  "status_tag": "ok",
+  "incident_count": {
+    "lastMonth": "0",
+    "lastYear": "1"
+  },
+
+  "uptime": 6637643,
+  "uptimes": {
+    "today": "100%",
+    "week": "100%",
+    "month": "100%"
+  }
+}
