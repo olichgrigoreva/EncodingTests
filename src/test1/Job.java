@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 //@JsonIgnoreProperties(ignoreUnknown = true)
 public class Job {
@@ -24,6 +26,9 @@ public class Job {
     @JsonProperty("format")
     public Format[] formats;
 
+    Map<String, String> map = new HashMap<>();
+
+
     @Override
     public String toString() {
         return "Job{" +
@@ -31,6 +36,4 @@ public class Job {
                 ", formats=" + Arrays.toString(formats) +
                 '}';
     }
-
-
 }
