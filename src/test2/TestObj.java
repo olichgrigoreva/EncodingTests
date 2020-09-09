@@ -3,34 +3,36 @@ package test2;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
+@XmlRootElement
 public class TestObj {
 
+    @XmlElement
     private String status;
+
     @JsonProperty("status_code")
+    @XmlElement(name = "status_code")
     private String code;
+
     @JsonProperty("status_tag")
+    @XmlElement(name = "status_tag")
     public String tag;
+
     @JsonProperty("incident_count")
+    @XmlElement(name = "incident_count")
     IncidentCount incidentCount;
+
+    @XmlElement
     public int uptime;
-    @JsonProperty("uptimes")
+
+    @XmlElement
     public Uptimes uptimes;
 
     public String getStatus() {
         return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
     }
 
     @Override
@@ -68,7 +70,10 @@ public class TestObj {
 }
 
 class IncidentCount{
+    @XmlElement
     public int lastMonth;
+
+    @XmlElement
     public int lastYear;
 
     @Override
@@ -81,8 +86,13 @@ class IncidentCount{
 }
 
 class Uptimes {
+    @XmlElement
     public String today;
+
+    @XmlElement
     public String week;
+
+    @XmlElement
     public String month;
 
     @Override
