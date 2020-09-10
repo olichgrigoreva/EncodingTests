@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-//@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Job {
     public String id;
     public String userid;
@@ -25,9 +25,6 @@ public class Job {
     public String time_left;
     @JsonProperty("format")
     public Format[] formats;
-
-    Map<String, String> map = new HashMap<>();
-
 
     @Override
     public String toString() {

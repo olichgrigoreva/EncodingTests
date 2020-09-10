@@ -48,7 +48,6 @@ public class TestObj {
 
     /**
      * status равен Ok; lastYear равен 1; uptime (сек) больше 1 суток
-     *
      * @param testObj объект с параметрами из JSON
      */
     public static void trueFalse(TestObj testObj) {
