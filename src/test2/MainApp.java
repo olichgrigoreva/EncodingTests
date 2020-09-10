@@ -22,7 +22,6 @@ public class MainApp {
             e.printStackTrace();
         }
 
-
         //Отправка запроса с параметрами XML
         System.out.println("XML");
         try {
